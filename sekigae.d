@@ -8,7 +8,9 @@
 import std.algorithm, std.array, std.random, std.range, std.stdio, std.string;
 
 auto readNamesShuffled(string path) {
-  return File(path).byLineCopy.array.randomCover.array;
+  auto names = File(path).byLineCopy.array;
+  names.randomShuffle;
+  return names;
 }
 
 auto formatNames(R)(R names, int nlines) {
