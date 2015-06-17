@@ -19,7 +19,7 @@ func readNames(path string) ([]string, error) {
 	}
 	scanner := bufio.NewScanner(file)
 
-	names := make([]string, 0)
+	var names []string
 	for scanner.Scan() {
 		names = append(names, scanner.Text())
 	}
