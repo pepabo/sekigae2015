@@ -24,7 +24,6 @@ public class sekigae {
             FileReader fr = new FileReader(path);
             BufferedReader br = new BufferedReader(fr);
             list = br.lines().collect(Collectors.toList());
-            Collections.shuffle(list);
         } catch(Exception e) {}
 
         return list;
