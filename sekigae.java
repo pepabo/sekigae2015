@@ -1,4 +1,4 @@
-// javac sekigae.java && java sekigae
+// javac sekigae.java && java Sekigae
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class sekigae {
+public class Sekigae {
     public static void main (String[] args) {
         List<String> names = loadFile("names.txt");
         Collections.shuffle(names);
