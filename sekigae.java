@@ -12,9 +12,10 @@ class Sekigae {
     public static void main (String[] args) throws Exception {
         final List<String> names = Files.readAllLines(Paths.get("names.txt"), StandardCharsets.UTF_8);
         Collections.shuffle(names);
-        eachSlice(names, 3).forEach((List<String> list) -> {
-            System.out.println(list.stream().collect(Collectors.joining(" ")));
-        });
+        eachSlice(names, 3)
+            .stream()
+            .map(list -> list.stream().collect(Collectors.joining(" ")))
+            .forEach(System.out::println);
     }
 
     private static <T> List<List<T>> eachSlice(List<T> list, int size) {
